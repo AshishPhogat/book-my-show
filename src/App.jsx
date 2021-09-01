@@ -6,7 +6,7 @@ function App(){
   </div>
 
   <button className= "mx-10  border-4 border-blue-500 px-5 py-2 text-lg text-white rounded-lg bg-blue-500  focus:outline-none focus:ring focus:border-blue-300 ">
-    hover me!
+    hover me! 
   </button>
 
   </>
