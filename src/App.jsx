@@ -6,6 +6,10 @@ import DefaultHOC from "./HOC/default.HOC";
 //component
 import Temp from "./components/Temp";
 
+// Import css files
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 function App(){
   return <>
     <DefaultHOC path="/" exact component={()=>{
