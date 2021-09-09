@@ -6,7 +6,7 @@ import {PrevArrow,NextArrow} from "../heroCarousal/arrows.component" ;
 
 const EntertainmentCard =(props)=>{
     return <> 
-        <div className="w-full h-56 px-5 "> 
+        <div className="w-full  h-64 px-5  "> 
             <img  className="w-full h-full rounded-lg" src={props.src} alt="Entertainment_image" /> 
         </div>
     </>
@@ -26,8 +26,9 @@ const EntertainmentCardSlider =()=>{
     const settings ={
         inFinite : false,
         autoplay : false,
-        slidesToShow : 5,
-        slidesToScroll : 5,
+        slidesToShow : 4,
+        slidesToScroll : 4,
+        centerPadding :"500px",
         InitialSlide : 0,
         nextArrow: <NextArrow />,
         prevArrow: <PrevArrow />,
