@@ -26,8 +26,8 @@ const HomePage=() => {
     </div>
     
     <div className=" bg-bms-800 py-11 mt-16 "> 
-        <div className="hidden md:block px-28">
-        <div  className="w-full h-28 ">
+        <div className=" md:px-28">
+        <div  className="w-full h-10 md:h-28 ">
             <img className="w-full h-full " src="https://in.bmscdn.com/discovery-catalog/collections/tr:w-1440,h-120/premiere-rupay-banner-web-collection-202104230555.png" alt="Premier_logo" />
         </div>
         </div>

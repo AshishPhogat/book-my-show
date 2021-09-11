@@ -33,7 +33,7 @@ const EntertainmentCardSlider =()=>{
         nextArrow: <NextArrow />,
         prevArrow: <PrevArrow />,
         responsive : [{
-            breakpoints : 1024,
+            breakpoint : 1024,
             settings : {
                 slidesToShow : 3,
                 slidesToScroll : 2,
@@ -41,7 +41,7 @@ const EntertainmentCardSlider =()=>{
             },
         },
         {
-            brakpoints : 600,
+            breakpoint : 600,
             settings : {
                 slidesToShow : 3,
                 slidesToScroll : 1,
@@ -50,7 +50,7 @@ const EntertainmentCardSlider =()=>{
                 
             },
         {
-            breakpoints : 480,
+            breakpoint : 480,
             settings : {
                 slidesToShow : 2,
                 slidesToScroll : 1,
