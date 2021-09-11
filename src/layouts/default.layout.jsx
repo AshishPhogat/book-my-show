@@ -11,6 +11,7 @@ const DefaultLayout = (props)=>{
     <div>
         <Navbar />
        <HeroCarousal />
+       {console.log(`the props.children is: ${props.children}`)}
         {props.children}
     </div>
     </>
