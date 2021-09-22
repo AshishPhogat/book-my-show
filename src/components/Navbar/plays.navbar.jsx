@@ -57,7 +57,7 @@ const NavLg =()=>{
 };
 const PlaysNavbar =()=>{
     return <> 
-    <div className="bg-bms-800 ">
+    <div className="bg-bms-800 p-1 lg:p-2 ">
         {/* small and medium devices */}
         <div className="lg:hidden">
             <NavSM />
