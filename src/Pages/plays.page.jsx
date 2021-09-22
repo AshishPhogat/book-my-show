@@ -18,13 +18,14 @@ const Plays=()=>{
                 <h1 className="text-2xl font-semibold mb-4 text-gray-800">Filters</h1>
                 <div className="flex flex-col gap-4">
                     <div className="flex  flex-col  gap-3">
-                        <Filters filterby="Date"/>
-                        <Filters filterby="Language"/>
-                        <Filters filterby="Categories"/>
-                        <Filters filterby="Generes"/>
-                        <Filters filterby="More Filters"/>
-                        <Filters filterby="Price"/>
+                        <Filters filterby="Date" tags={["Today","Tomorrow","The Weekend"]} />
+                        <Filters filterby="Language" tags={["English","Kannad","Hindi"]}/>
+                        <Filters filterby="Categories" tags={["Theatre"]}/>
+                        <Filters filterby="Generes" tags={["Comedy","Drama","Historical","Political"]}/>
+                        <Filters filterby="More Filters" tags={["Online Streaming","Outdoor Events"]}/>
+                        <Filters filterby="Price" tags={["Free","0-500","501-2000","Above 2000"]}/>
                     </div>
+                    <div className="text-Ashish-500 flex justify-center border-2 px-2 py-1 text-sm rounded-md border-Ashish-500 ">Browse by Venues</div>
                 </div>
                 </div>
                 <div className="w-full flex flex-col gap-3">
@@ -36,7 +37,7 @@ const Plays=()=>{
                         </div>
                     </div>
                     </div>
-                    <div className="container flex flex-wrap gap-1">
+                    <div className="container flex flex-wrap gap-1 lg:gap-5">
                         {images.map(({subtitle,title,writer,cost,src})=>{
                             return (
                                 <div>
