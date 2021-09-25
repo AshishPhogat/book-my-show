@@ -22,7 +22,7 @@ axios.defaults.params["api_key"]=process.env.REACT_APP_API_KEY;
 function App(){
   return <>
     <DefaultHOC path="/" exact component={HomePage} />
-    <MovieHOC path="/movie:id" exact component={Movie} />
+    <MovieHOC path="/movie/:id" exact component={Movie} />
     <PlaysHOC path="/plays:id" exact component={Plays} />
   </>
 }

@@ -13,7 +13,8 @@ const PosterSlider =(props)=>{
     const sliderConfig = props.config ? props.config : PosterSliderSettings ;
 
     return <> 
-        <div className="px-3 pt-12 pb-2">
+        <div className="container mx-auto ">
+        <div className="px-3 pt-12 pb-2 ">
         <h1 className={`font-bold ${props.isDark ?"text-white" :"text-gray-800"} text-2xl`}>{props.title}</h1>
         <h3 className={`${props.isDark ?"text-white" :"text-gray-800"} font-ligth text-sm`}>{props.subtitle}</h3>
         </div>
@@ -22,6 +23,7 @@ const PosterSlider =(props)=>{
                 return <Poster {...image} isDark={props.isDark}/>
             })}
         </Slider>
+        </div>
     </>
 };
 

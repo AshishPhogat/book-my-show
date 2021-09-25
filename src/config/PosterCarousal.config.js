@@ -1,9 +1,13 @@
+import { NextArrow,PrevArrow } from "../components/heroCarousal/arrows.component";
+
 const settings ={
     inFinite : false,
     autoplay : false,
     slidesToShow : 5,
     slidesToScroll : 2,
     InitialSlide : 0,
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
     Arrow: true,
     responsive : [{
         breakpoint : 1024,
