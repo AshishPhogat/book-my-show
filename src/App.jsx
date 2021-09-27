@@ -23,7 +23,7 @@ function App(){
   return <>
     <DefaultHOC path="/" exact component={HomePage} />
     <MovieHOC path="/movie/:id" exact component={Movie} />
-    <PlaysHOC path="/plays:id" exact component={Plays} />
+    <PlaysHOC path="/plays/:id" exact component={Plays} />
   </>
 }
 

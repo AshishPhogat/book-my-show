@@ -1,15 +1,19 @@
-import React from "react";
+import React,{useContext} from "react";
 
 import {BiChevronRight,BiSearch} from "react-icons/bi"
 import {IoMdArrowDropdown,IoIosMenu} from "react-icons/io"
 import {HiOutlineShare} from "react-icons/hi"
 
+//context
+import { MovieContext } from "../../context/movie.context";
 
 const NavSm = () => {
+
+    const {movie} = useContext(MovieContext);
     return <> 
         <div className = "flex items-center justify-between h-10">
             <div  >
-                <h3 className ="text-xl font-bold text-white pt-3 h-12">It All Starts Here!</h3>
+                <h3 className ="text-xl font-bold text-white pt-3 h-12">{movie.original_title}</h3>
             </div>
             <div>
                 <HiOutlineShare className = "text-white text-2xl"/>

@@ -1,15 +1,17 @@
 import React from "react";
 import Slider from "react-slick";
+import { Link } from "react-router-dom";
+
 
 //component
 import {PrevArrow,NextArrow} from "../heroCarousal/arrows.component" ;
 
 const EntertainmentCard =(props)=>{
-    return <> 
+    return <Link to ={`/plays/123}`}> 
         <div className="w-full  h-64 px-5  "> 
             <img  className="w-full h-full rounded-lg" src={props.src} alt="Entertainment_image" /> 
         </div>
-    </>
+    </Link>
 };
 
 const EntertainmentCardSlider =()=>{

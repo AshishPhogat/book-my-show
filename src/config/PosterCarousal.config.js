@@ -29,8 +29,8 @@ const settings ={
     {
         breakpoint : 360,
         settings : {
-            slidesToShow : 2,
-            centerMode:true,
+            slidesToShow : 3,
+            // centerMode:true,
             slidesToScroll : 1,
         },
     }],
