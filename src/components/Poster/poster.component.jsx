@@ -9,8 +9,6 @@ const Poster=(props)=>{
             </div>
             <h3 className={`text-lg w-24   overflow-auto lg:w-52 font-bold ${props.isDark ?"text-white" :"text-gray-800"}`}>{props.original_title}</h3>
             {/* <p className={`text-sm ${props.isDark ?"text-white" :"text-gray-800"}`}>{props.subtitle}</p> */}
-            <h5 className="text-sm text-gray-400">{props.writer}</h5>
-            <h5 className="text-sm text-gray-400">{props.cost}</h5>
         </div>
     </Link >
 };

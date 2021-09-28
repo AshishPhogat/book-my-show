@@ -1,4 +1,5 @@
-import React from "react";
+import React,{useEffect,useState} from "react";
+import axios from "axios";
 
 //config
 import Images from "../config/Plays.images";
@@ -9,6 +10,18 @@ import Filters from "../components/Plays.Filters/filters.component";
 
 
 const Plays=()=>{
+    const [plays,setPlays] = useState([]);
+
+    useEffect(()=>{
+        const requestPlays = async()=>{
+            const getPlays = await axios.get(`/movie/upcoming`);
+            // console.log("below is the plays list");
+            // console.log(getPlays.data.results);
+            setPlays(getPlays.data.results);
+        }
+        requestPlays();
+    });
+
     const images=[...Images];
 
     return <> 
@@ -38,10 +51,10 @@ const Plays=()=>{
                     </div>
                     </div>
                     <div className="container flex flex-wrap gap-1 lg:gap-5">
-                        {images.map(({subtitle,title,writer,cost,src})=>{
+                        {plays.map((play)=>{
                             return (
                                 <div>
-                                <Poster subtitle={subtitle} title={title} writer={writer} cost={cost} src={src} />
+                                <Poster  original_title={play.original_title} id={play.id} poster_path={play.poster_path} />
                                 </div>)
                         })}
                     </div>
