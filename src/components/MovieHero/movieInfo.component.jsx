@@ -1,6 +1,26 @@
+import React,{useContext,useState} from "react";
 
+//components
+import PaymentModal from "../PaymentModal/payment.component";
+
+//context
+import { MovieContext } from "../../context/movie.context";
 const MovieInfo =()=>{
+
+    const {movie} = useContext(MovieContext);
+    const [isOpen,setIsOpen] = useState(false);
+    const [price,setPrice] = useState(0);
+
+    const rentMovies =()=>{
+        setIsOpen(true);
+        setPrice(149);
+    };
+    const buyMovies =()=>{
+        setIsOpen(true);
+        setPrice(599);
+    };
     return <> 
+        <PaymentModal isOpen={isOpen} setIsOpen={setIsOpen}  price={price} />
         <div className="flex flex-col items-start gap-3 p-1 md:p-3">
             <div className="flex  gap-3">
                 <div className=" h-6">
@@ -10,7 +30,7 @@ const MovieInfo =()=>{
                     <span className="bg-bms-700 p-1 text-white font-light text-xs rounded-md ">Streaming Now</span>
                 </div>
             </div>
-            <h1 className="text-white hidden lg:block text-4xl font-semibold ">Zack Snyder`s Justice League</h1>
+            <h1 className="text-white hidden lg:block text-4xl font-semibold ">{movie.original_title}</h1>
             
             <div className="flex flex-col-reverse gap-2  lg:block">
             
@@ -36,8 +56,8 @@ const MovieInfo =()=>{
             </div>
 
             <div className="flex gap-4 items-center justify-evenly md:w-screen lg:w-full md:pr-4 lg:flex my-2">
-            <button className="bg-red-600 bg-opcity-50 text-white text-base  px-9 py-1 md:px-36 rounded-lg md:py-3">Rent ₹149</button>
-            <button className="bg-red-600 bg-opcity-50 text-white text-base  px-9 py-1  md:px-36 rounded-lg md:py-3">Buy ₹689</button>
+            <button onClick={rentMovies} className="bg-red-600 bg-opcity-50 text-white text-base  px-9 py-1 md:px-36 rounded-lg md:py-3">Rent ₹149</button>
+            <button onClick={buyMovies} className="bg-red-600 bg-opcity-50 text-white text-base  px-9 py-1  md:px-36 rounded-lg md:py-3">Buy ₹689</button>
             </div>
             
             </div>
